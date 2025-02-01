@@ -1,0 +1,96 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFB6C1; /* Fondo rosado claro */
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    position: relative; /* Para que los mensajes se posicionen relativos al body */
+    min-height: 100vh; /* Asegura que el body ocupe toda la pantalla */
+    overflow: hidden; /* Evita que los mensajes desborden la pantalla */
+}
+
+h1 {
+    color: #F8F8FF; /* Blanco fantasía */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los mensajes */
+.mensaje {
+    position: absolute; /* Posicionamiento absoluto */
+    font-size: 1.2em;
+    color: #F08080; /* Rosa claro */
+    animation: flotar 5s infinite ease-in-out; /* Animación para que floten */
+}
+
+.mensaje-1 {
+    top: 10%;
+    left: 5%;
+}
+
+.mensaje-2 {
+    top: 20%;
+    right: 5%;
+}
+
+.mensaje-3 {
+    bottom: 30%;
+    left: 15%;
+}
+
+.mensaje-4 {
+    bottom: 10%;
+    right: 10%;
+}
+
+/* Animación para que los mensajes floten */
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Contenedor de botones */
+.buttons {
+    margin-top: 30px;
+    position: relative; /* Para que los botones no se vean afectados por los mensajes */
+    z-index: 1; /* Asegura que los botones estén sobre los mensajes */
+}
+
+/* Estilos para los botones */
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    color: black; /* Texto de los botones en negro */
+}
+
+#si {
+    background-color: #FFF0F5; /* Rosa muy claro */
+}
+
+#no {
+    background-color: #E6E6FA; /* Lila claro */
+    position: absolute; /* Para que se pueda mover */
+}
+
+/* Estilos para móviles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    .mensaje {
+        font-size: 1em;
+    }
+    button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
